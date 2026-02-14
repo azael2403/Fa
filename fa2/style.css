@@ -1,0 +1,108 @@
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden; 
+}
+
+/* Tarjeta */
+.card {
+  position: relative;
+  background: rgb(207, 41, 132);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 420px;
+  margin: auto;
+  top: 10000%;
+  transform: translateY(-8%);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  z-index: 10;
+  animation: aparecer 1.2s ease-in-out;
+}
+
+.foto-principal {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.foto-secu {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+h1 {
+  color: #dfdcde;
+}
+
+.mensaje {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+button {
+  background-color: #e60073;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c70063;
+}
+
+/* Fotos regadas */
+.foto-flotante {
+  position: absolute;
+  width: 160px;
+  border-radius: 15px;
+  opacity: 0.9;
+  animation: flotar 6s ease-in-out infinite;
+}
+
+/* Posiciones */
+.f1 { top: 10%; left: 10%; }
+.f2 { top: 15%; right: 8%; }
+.f3 { bottom: 12%; left: 10%; }
+.f4 { bottom: 10%; right: 12%; }
+.f5 { top: 90px; top: 10px; }
+.f6 { bottom: 90px; bottom: 10px; }
+.f7 { top: 1px; right: 1px; }
+.f8 { bottom: 1px; right: 1px; }
+.a1 { left: 650x; right: 290px; }
+.a2 { left: 350px; right: 50px; }
+
+@keyframes flotar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes subir {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
